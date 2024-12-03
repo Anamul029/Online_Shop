@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 const Root = () => {
     return (
-        <div className='w-full'>
+        <div className='w-[100%] px-3'>
             <NavBar></NavBar>
             <Outlet></Outlet>
         </div>

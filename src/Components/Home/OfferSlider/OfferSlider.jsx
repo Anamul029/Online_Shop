@@ -42,8 +42,6 @@ const OfferSlider = () => {
                 <div className="keen-slider__slide number-slide1"><img src="https://www.startech.com.bd/image/cache/catalog/home/geyser-home-banner-982x500.webp" className="" alt="" /></div>
                 <div className="keen-slider__slide number-slide1"><img src="https://www.startech.com.bd/image/cache/catalog/home/gadget-fest-home-banner-2024-982x500.webp" alt="" /></div>
                 <div className="keen-slider__slide number-slide1"><img src="https://www.startech.com.bd/image/cache/catalog/home/banner/winter-desktop-deal-web-banner-982x500.webp" alt="" /></div>
-                <div className="keen-slider__slide number-slide1"><img src="https://www.startech.com.bd/image/cache/catalog/home/geyser-home-banner-982x500.webp" alt="" /></div>
-                <div className="keen-slider__slide number-slide1"><img src="https://www.startech.com.bd/image/cache/catalog/home/geyser-home-banner-982x500.webp" alt="" /></div>
 
 
             </div>
