@@ -1,6 +1,7 @@
 import { FaFireAlt } from "react-icons/fa";
 import { IoBagCheck } from "react-icons/io5";
 import { MdAccountCircle } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -19,11 +20,11 @@ const NavBar = () => {
                 className="text-3xl" />
                     <h1 className="font-semibold">Laptop Mela</h1>
                 </button>
-                <button className="flex items-center gap-1">
+                <Link to='/login' className="flex items-center gap-1">
                     <MdAccountCircle
                         className="text-3xl" />
                     <h1 className="font-semibold">Account</h1>
-                </button>
+                </Link>
                   <button className="btn btn-primary uppercase">Pc Builder</button>
             </div>
         </div>

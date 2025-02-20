@@ -29,11 +29,10 @@
 // };
 
 // export default DownNavBar;
-import React from "react";
 
 const DownNavBar = () => {
     return (
-        <header className="p-4 bg-blue-50 shadow-lg w-full z-50 dark:text-gray-800">
+        <header className=" h-16 bg-blue-50 shadow-lg w-full z-50 dark:text-gray-800 sticky">
             <div className="container flex justify-between h-16 mx-auto md:justify-center md:space-x-8">
                 <ul className="items-stretch hidden space-x-3 md:flex">
                     {["Desktop", "Laptop", "Monitor", "Phone", "Tablet", "Camera"].map((link, index) => (
