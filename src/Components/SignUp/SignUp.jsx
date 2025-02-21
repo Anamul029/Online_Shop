@@ -4,8 +4,8 @@ import { useContext } from "react";
 import Swal from "sweetalert2";
 
 const SignUp = () => {
-    const { createUser } = useContext(AuthContext)
-    const navigate=useNavigate();
+    const { createUser,UpdateProfile } = useContext(AuthContext)
+    const navigate = useNavigate();
     const handleRegister = (e) => {
         e.preventDefault();
         const first = e.target.firstname.value;
@@ -16,20 +16,26 @@ const SignUp = () => {
         console.log(info);
         // register auth here
         createUser(email, password)
-        .then(res=>{
-            console.log(res.user);
-            Swal.fire({
-                position: "top-end",
-                icon: "success",
-                title: "Succesfully User Created",
-                showConfirmButton: false,
-                timer: 1500
-            });
-            navigate('/')
-        })
-        .catch(error=>{
-            console.log(error);
-        })
+            .then(res => {
+                console.log(res.user);
+                UpdateProfile(first,last);
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Succesfully User Created",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                navigate('/')
+            })
+            .catch(error => {
+                console.log(error);
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Something went wrong please try again",
+                });
+            })
 
     }
     return (
