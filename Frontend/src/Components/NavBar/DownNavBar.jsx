@@ -32,7 +32,7 @@
 
 const DownNavBar = () => {
     return (
-        <header className=" h-16 bg-blue-50 shadow-lg w-full z-50 dark:text-gray-800 sticky">
+        <header className="font-[Inter] h-16 bg-blue-50 shadow-lg w-full z-50 dark:text-gray-800 sticky">
             <div className="container flex justify-between h-16 mx-auto md:justify-center md:space-x-8">
                 <ul className="items-stretch hidden space-x-3 md:flex">
                     {["Desktop", "Laptop", "Monitor", "Phone", "Tablet", "Camera"].map((link, index) => (

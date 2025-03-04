@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <div className="navbar  w-[100%] px-[8%] bg-black py-5">
+        <div className="navbar font-[Inter]  w-[100%] px-[8%] bg-black py-5">
             <div className="flex-1 items-center justify-center flex pr-8">
                 <a className="btn btn-ghost text-3xl text-white">Electro<span className="text-green-700">Solutions</span></a>
                 <input type="text" placeholder="Search" className="input input-bordered w-[70%]" />
