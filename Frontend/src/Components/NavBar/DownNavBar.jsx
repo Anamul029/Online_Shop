@@ -1,34 +1,4 @@
 
-// const DownNavBar = () => {
-//     return (
-//         <header className="p-4 bg-blue-50 shadow-lg w-full z-50   dark:text-gray-800">
-//             <div className="container flex justify-between h-16 mx-auto md:justify-center md:space-x-8">
-//                 <ul className="items-stretch hidden space-x-3 md:flex">
-//                     <li className="flex">
-//                         <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">Link</a>
-//                     </li>
-//                     <li className="flex">
-//                         <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">Link</a>
-//                     </li>
-//                     <li className="flex">
-//                         <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border- dark:text-violet-600 dark:border-violet-600">Link</a>
-//                     </li>
-//                     <li className="flex">
-//                         <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">Link</a>
-//                     </li>
-//                     <li className="flex">
-//                         <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">Link</a>
-//                     </li>
-//                     <li className="flex">
-//                         <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">Link</a>
-//                     </li>
-//                 </ul>
-//             </div>
-//         </header>
-//     );
-// };
-
-// export default DownNavBar;
 
 const DownNavBar = () => {
     return (

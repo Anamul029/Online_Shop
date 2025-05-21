@@ -1,7 +1,7 @@
 
 const Fetured_Category = () => {
     return (
-        <div className="px-[8%] mx-auto my-12">
+        <div className="px-[4%] mx-auto my-12">
             <div className="text-center">
                 <h1 className="text-2xl font-semibold">Featured Category</h1>
                 <p>Get Your Desired Product from Featured Category!</p>
