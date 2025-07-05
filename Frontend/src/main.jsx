@@ -11,6 +11,8 @@ import Login from './Components/Login/Login.jsx';
 import SignUp from './Components/SignUp/SignUp.jsx';
 import AuthProvider from './Components/Provider/AuthProvider.jsx';
 import SpecialDeal from './Components/SpecialDeal/SpecialDeal.jsx';
+import FeaturedDetail from './Components/Featured Product/FeaturedDetail.jsx';
+import ShopCart from './Components/ShopingCart/ShopCart.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,8 +31,18 @@ const router = createBrowserRouter([
         element: <SignUp />,
       },
       {
-        path:'specialdeal',
-        element:<SpecialDeal/>,
+        path: 'specialdeal',
+        element: <SpecialDeal />,
+      },
+      {
+        path:'shopCart',
+        element:<ShopCart/>,
+      },
+      {
+        path: "/details/:_id",
+        element: <FeaturedDetail />,
+        loader: () => fetch('http://localhost:5000/featuredProduct')
+
       },
     ],
   },

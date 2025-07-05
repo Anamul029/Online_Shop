@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const FeaturedProduct = () => {
     const [Featured,setFeaturedCard]=useState([])
     useEffect(()=>{
-        fetch('../../../public/featuredProduct.json')
+        fetch('http://localhost:5000/featuredProduct')
         .then(res=>res.json())
         .then(data=>setFeaturedCard(data))
     },[])

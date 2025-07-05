@@ -40,7 +40,7 @@ const NavBar = () => {
             <MdAccountCircle className="text-2xl" />
             <span className="font-semibold hidden lg:block">Account</span>
           </Link>
-          <button className="btn btn-primary uppercase">PC Builder</button>
+          <Link to="/shopCart" className="btn btn-primary uppercase">Shop Cart</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -62,19 +62,15 @@ const NavBar = () => {
           />
           <AiOutlineSearch className="absolute left-3 top-3 text-gray-500 text-lg" />
         </div>
-        <button className="flex items-center justify-center gap-1 hover:text-green-500 w-full">
-          <IoBagCheck className="text-2xl" />
-          <span className="font-semibold">Offers</span>
-        </button>
-        <button className="flex items-center justify-center gap-1 hover:text-green-500 w-full">
+        <Link to='/specialdeal' className="flex items-center gap-1 hover:text-green-500">
           <FaFireAlt className="text-2xl" />
-          <span className="font-semibold">Laptop Mela</span>
-        </button>
-        <Link to="/login" className="flex items-center justify-center gap-1 hover:text-green-500 w-full">
-          <MdAccountCircle className="text-2xl" />
-          <span className="font-semibold">Account</span>
+          <span className="font-semibold  mt-4 lg:block">Happy Hour <br /><span className="text-xs">special deal</span></span>
         </Link>
-        <button className="btn btn-primary uppercase w-full">PC Builder</button>
+        <Link to="/login" className="flex items-center gap-1 hover:text-green-500">
+          <MdAccountCircle className="text-2xl" />
+          <span className="font-semibold  lg:block">Account</span>
+        </Link>
+        <Link to="/shopCart" className="btn btn-primary uppercase w-full">Shop Cart</Link>
       </div>
     </nav>
   );
