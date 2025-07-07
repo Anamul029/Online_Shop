@@ -1,11 +1,12 @@
 import { useContext } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const FeaturedDetail = () => {
     const information = useLoaderData()
     const { _id } = useParams();
+    const navigate=useNavigate()
     const { user } = useContext(AuthContext)
     const userName = user.displayName;
     const userEmail = user.email;
@@ -30,6 +31,7 @@ const FeaturedDetail = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged === true) {
+                    navigate('/shopCart')
                     Swal.fire({
                         position: "top-end",
                         icon: "success",

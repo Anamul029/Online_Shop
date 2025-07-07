@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaFireAlt } from "react-icons/fa";
 import { IoBagCheck } from "react-icons/io5";
-import { MdAccountCircle } from "react-icons/md";
+import { MdAccountCircle, MdDashboard } from "react-icons/md";
 import { AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
@@ -17,14 +17,16 @@ const NavBar = () => {
         </Link>
 
         {/* Search Bar (Visible on Medium & Large Screens) */}
-        <div className="hidden lg:flex relative w-[40%]">
+        {/* <div className="hidden lg:flex relative w-[40%]">
           <input
             type="text"
             placeholder="Search"
             className="input input-bordered w-full px-4 py-2 rounded-lg pl-10 bg-gray-900 border-gray-700 text-white"
           />
           <AiOutlineSearch className="absolute left-3 top-3 text-gray-500 text-lg" />
-        </div>
+        </div> */}
+
+        {/* dashboard */}
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
@@ -41,6 +43,13 @@ const NavBar = () => {
             <span className="font-semibold hidden lg:block">Account</span>
           </Link>
           <Link to="/shopCart" className="btn btn-primary uppercase">Shop Cart</Link>
+          <div className="flex justify-center ">
+            <Link to='/dashboard' className="flex items-center gap-1 hover:text-green-500">
+              <MdDashboard
+                className="text-2xl" />
+              <span className="font-semibold hidden lg:block">Dashboard</span>
+            </Link>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}

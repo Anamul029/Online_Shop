@@ -13,6 +13,11 @@ import AuthProvider from './Components/Provider/AuthProvider.jsx';
 import SpecialDeal from './Components/SpecialDeal/SpecialDeal.jsx';
 import FeaturedDetail from './Components/Featured Product/FeaturedDetail.jsx';
 import ShopCart from './Components/ShopingCart/ShopCart.jsx';
+import CheckoutPage from './Components/PaymentGateway/CheckoutPage.jsx';
+import DashBoard from './Components/Dashboard/AdminDashboard.jsx';
+import DownNavBar from './Components/NavBar/DownNavBar.jsx';
+import PostData from './Components/Dashboard/PostData.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,8 +40,9 @@ const router = createBrowserRouter([
         element: <SpecialDeal />,
       },
       {
-        path:'shopCart',
-        element:<ShopCart/>,
+        path: 'shopCart',
+        element: <ShopCart />,
+        loader: () => fetch('http://localhost:5000/carts',)
       },
       {
         path: "/details/:_id",
@@ -44,8 +50,26 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/featuredProduct')
 
       },
+      {
+        path:'checkout',
+        element:<CheckoutPage/>
+      }
     ],
   },
+  {
+    path:'/dashboard',
+    element:<DashBoard/>,
+    children:[
+      {
+        path:'/dashboard',
+        element:<PostData/>,
+      },
+    ]
+  },
+ {
+  path:'/down',
+  element:<DownNavBar/>,
+ } 
 ]);
 
 createRoot(document.getElementById('root')).render(
