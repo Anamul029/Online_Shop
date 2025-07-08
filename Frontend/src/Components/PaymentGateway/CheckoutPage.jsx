@@ -6,7 +6,7 @@ const CheckoutPage = () => {
   const handlePayment = (e) => {
   e.preventDefault();
 
-  fetch('http://localhost:5000/payment', {
+  fetch('https://electro-server-nine.vercel.app/payment', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -15,7 +15,7 @@ const PostData = () => {
         };
 
               // cart data post
-                 fetch('http://localhost:5000/featuredProduct', {
+                 fetch('https://electro-server-nine.vercel.app/featuredProduct', {
                      method: 'POST',
                      headers: {
                          'content-type': 'application/json'

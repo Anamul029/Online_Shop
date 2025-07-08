@@ -8,8 +8,8 @@ const FeaturedDetail = () => {
     const { _id } = useParams();
     const navigate=useNavigate()
     const { user } = useContext(AuthContext)
-    const userName = user.displayName;
-    const userEmail = user.email;
+    const userName = user?.displayName;
+    const userEmail = user?.email;
     console.log(userName, userEmail);
     const info = information.filter(info => info._id === _id)
     // console.log(info);
@@ -20,7 +20,7 @@ const FeaturedDetail = () => {
     const handleAddCart = e => {
         e.preventDefault();
         // cart data post
-        fetch('http://localhost:5000/carts', {
+        fetch('https://electro-server-nine.vercel.app/carts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

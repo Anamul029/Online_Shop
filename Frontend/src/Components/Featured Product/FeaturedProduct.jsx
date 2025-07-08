@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const FeaturedProduct = () => {
     const [Featured,setFeaturedCard]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/featuredProduct')
+        fetch('https://electro-server-nine.vercel.app/featuredProduct')
         .then(res=>res.json())
         .then(data=>setFeaturedCard(data))
     },[])

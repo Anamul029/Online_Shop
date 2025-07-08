@@ -42,12 +42,12 @@ const router = createBrowserRouter([
       {
         path: 'shopCart',
         element: <ShopCart />,
-        loader: () => fetch('http://localhost:5000/carts',)
+        loader: () => fetch('https://electro-server-nine.vercel.app/carts',)
       },
       {
         path: "/details/:_id",
         element: <FeaturedDetail />,
-        loader: () => fetch('http://localhost:5000/featuredProduct')
+        loader: () => fetch('https://electro-server-nine.vercel.app/featuredProduct')
 
       },
       {
